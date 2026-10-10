@@ -1,4 +1,4 @@
-package com.ashutosh.codealpha_fitnesstrackerapp;
+﻿package com.ashutosh.codealpha_fitnesstrackerapp;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -51,10 +51,6 @@ public class AIChatActivity extends AppCompatActivity {
 
     private boolean requestInProgress = false;
     private boolean contextLoaded = false;
-
-    /*
-     * Default context is used temporarily while Firebase data is loading.
-     */
     private String userFitnessContext =
             "Name: Not available\n"
                     + "Age: Not available\n"
@@ -303,10 +299,6 @@ public class AIChatActivity extends AppCompatActivity {
                             workoutSnapshot.child("createdAt")
                     );
 
-            /*
-             * Old records may not contain createdAt.
-             * In that case, the latest iterated record becomes the fallback.
-             */
             if (createdAt > newestCreatedAt
                     || newestCreatedAt == Long.MIN_VALUE) {
 
@@ -472,15 +464,15 @@ public class AIChatActivity extends AppCompatActivity {
 
     private void showWelcomeMessage() {
         addAIMessage(
-                "👋 Hello! I'm your VitaFit AI Fitness Coach.\n\n"
+                "ðŸ‘‹ Hello! I'm your VitaFit AI Fitness Coach.\n\n"
                         + "I can use your saved profile and workout "
                         + "progress to provide personalized guidance.\n\n"
                         + "Try asking:\n"
-                        + "• Analyse my fitness progress\n"
-                        + "• Create a workout for my goal\n"
-                        + "• Suggest my next workout\n"
-                        + "• Create a balanced diet plan\n"
-                        + "• How can I improve my routine?"
+                        + "â€¢ Analyse my fitness progress\n"
+                        + "â€¢ Create a workout for my goal\n"
+                        + "â€¢ Suggest my next workout\n"
+                        + "â€¢ Create a balanced diet plan\n"
+                        + "â€¢ How can I improve my routine?"
         );
     }
 
@@ -604,7 +596,7 @@ public class AIChatActivity extends AppCompatActivity {
             details = details.substring(0, 500) + "...";
         }
 
-        return "⚠️ AI service error\n\n"
+        return "âš ï¸ AI service error\n\n"
                 + details
                 + "\n\nPlease take a screenshot of this message.";
     }
@@ -701,16 +693,11 @@ public class AIChatActivity extends AppCompatActivity {
                 || message.equals("hi")
                 || message.equals("hey")) {
 
-            return "👋 Hello!\n\n"
+            return "ðŸ‘‹ Hello!\n\n"
                     + "Ask me to analyse your saved profile, "
                     + "workout progress or fitness goal.";
         }
 
-        /*
-         * Only simple greetings remain offline.
-         * Workout, diet and progress questions go to Gemini so that
-         * saved profile information can be used.
-         */
         return null;
     }
 

@@ -1,4 +1,4 @@
-package com.ashutosh.codealpha_fitnesstrackerapp;
+﻿package com.ashutosh.codealpha_fitnesstrackerapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -248,8 +248,6 @@ public class SplashActivity extends AppCompatActivity {
             TextView title,
             TextView tagline
     ) {
-
-        // Initial State
         logo.setAlpha(0f);
         logo.setScaleX(0.5f);
         logo.setScaleY(0.5f);
@@ -260,8 +258,6 @@ public class SplashActivity extends AppCompatActivity {
 
         tagline.setAlpha(0f);
         tagline.setTranslationY(40f);
-
-        // Logo Animation
         logo.animate()
                 .alpha(1f)
                 .rotation(0f)
@@ -270,8 +266,6 @@ public class SplashActivity extends AppCompatActivity {
                 .setDuration(800)
                 .setInterpolator(new OvershootInterpolator(1.2f))
                 .start();
-
-        // App Name Animation
         title.animate()
                 .alpha(1f)
                 .translationY(0f)
@@ -279,8 +273,6 @@ public class SplashActivity extends AppCompatActivity {
                 .setStartDelay(250)
                 .setInterpolator(new AccelerateDecelerateInterpolator())
                 .start();
-
-        // Tagline Animation
         tagline.animate()
                 .alpha(1f)
                 .translationY(0f)

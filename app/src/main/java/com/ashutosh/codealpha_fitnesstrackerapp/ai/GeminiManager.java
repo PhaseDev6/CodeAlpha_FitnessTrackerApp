@@ -1,4 +1,4 @@
-package com.ashutosh.codealpha_fitnesstrackerapp.ai;
+﻿package com.ashutosh.codealpha_fitnesstrackerapp.ai;
 
 import androidx.annotation.NonNull;
 
@@ -55,7 +55,7 @@ public class GeminiManager {
                         + "3. Keep the response practical, clearly structured and "
                         + "easy to read on a mobile screen.\n"
                         + "4. Use short plain-text headings and the Unicode bullet "
-                        + "character • for lists.\n"
+                        + "character â€¢ for lists.\n"
                         + "5. Never use Markdown formatting or Markdown symbols such "
                         + "as #, *, **, _, backticks or ---.\n"
                         + "6. Do not diagnose diseases or prescribe medicines.\n"
@@ -135,10 +135,6 @@ public class GeminiManager {
         );
     }
 
-    /**
-     * Converts occasional Markdown returned by the model into clean text that
-     * displays professionally inside a normal Android TextView.
-     */
     private String cleanForMobileDisplay(@NonNull String response) {
         String cleaned = response
                 .replace("**", "")
@@ -146,7 +142,7 @@ public class GeminiManager {
                 .replace("`", "")
                 .replaceAll("(?m)^\\s*#{1,6}\\s*", "")
                 .replaceAll("(?m)^\\s*[-*_]{3,}\\s*$", "")
-                .replaceAll("(?m)^\\s*[-*+]\\s+", "• ")
+                .replaceAll("(?m)^\\s*[-*+]\\s+", "â€¢ ")
                 .replaceAll("\\n{3,}", "\\n\\n")
                 .trim();
 

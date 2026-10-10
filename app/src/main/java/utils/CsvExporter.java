@@ -1,4 +1,4 @@
-package utils;
+﻿package utils;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -22,7 +22,6 @@ import model.Workout;
 public class CsvExporter {
 
     private CsvExporter() {
-        // Prevent object creation
     }
 
     public static void exportWorkouts(
@@ -78,10 +77,6 @@ public class CsvExporter {
             try (FileOutputStream outputStream =
                          new FileOutputStream(csvFile)) {
 
-                /*
-                 * UTF-8 BOM helps Excel correctly display
-                 * special characters and emojis.
-                 */
                 outputStream.write(
                         new byte[]{
                                 (byte) 0xEF,

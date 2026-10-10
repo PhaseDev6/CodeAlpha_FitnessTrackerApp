@@ -1,4 +1,4 @@
-package model;
+﻿package model;
 
 public class Workout {
 
@@ -8,12 +8,8 @@ public class Workout {
     private int duration;
     private int calories;
     private String date;
-
-    // Required by Firebase
     public Workout() {
     }
-
-    // Constructor for SQLite
     public Workout(
             int id,
             String name,
@@ -27,8 +23,6 @@ public class Workout {
         this.calories = calories;
         this.date = date;
     }
-
-    // Constructor for Firebase
     public Workout(
             String firebaseId,
             String name,
@@ -42,8 +36,6 @@ public class Workout {
         this.calories = calories;
         this.date = date;
     }
-
-    // ID
     public int getId() {
         return id;
     }
@@ -51,8 +43,6 @@ public class Workout {
     public void setId(int id) {
         this.id = id;
     }
-
-    // Firebase ID
     public String getFirebaseId() {
         return firebaseId;
     }
@@ -60,8 +50,6 @@ public class Workout {
     public void setFirebaseId(String firebaseId) {
         this.firebaseId = firebaseId;
     }
-
-    // Workout Name
     public String getName() {
         return name;
     }
@@ -69,8 +57,6 @@ public class Workout {
     public void setName(String name) {
         this.name = name;
     }
-
-    // Compatibility method for PDF and other code
     public String getWorkoutName() {
         return name;
     }
@@ -78,8 +64,6 @@ public class Workout {
     public void setWorkoutName(String workoutName) {
         this.name = workoutName;
     }
-
-    // Duration
     public int getDuration() {
         return duration;
     }
@@ -87,8 +71,6 @@ public class Workout {
     public void setDuration(int duration) {
         this.duration = duration;
     }
-
-    // Calories
     public int getCalories() {
         return calories;
     }
@@ -96,8 +78,6 @@ public class Workout {
     public void setCalories(int calories) {
         this.calories = calories;
     }
-
-    // Date
     public String getDate() {
         return date;
     }

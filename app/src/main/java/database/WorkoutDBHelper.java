@@ -1,4 +1,4 @@
-package database;
+﻿package database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,15 +9,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class WorkoutDBHelper extends SQLiteOpenHelper {
-
-    // Database Details
     private static final String DATABASE_NAME = "FitnessTracker.db";
     private static final int DATABASE_VERSION = 1;
-
-    // Table Name
     public static final String TABLE_WORKOUT = "workouts";
-
-    // Columns
     public static final String COL_ID = "id";
     public static final String COL_NAME = "workout_name";
     public static final String COL_DURATION = "duration";
@@ -48,8 +42,6 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_WORKOUT);
         onCreate(db);
     }
-
-    // Insert Workout
     public boolean insertWorkout(String name,
                                  int duration,
                                  int calories,
@@ -70,8 +62,6 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
 
         return result != -1;
     }
-
-    // Total Workouts
     public int getTotalWorkouts() {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -92,8 +82,6 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
 
         return total;
     }
-
-    // Total Workout Duration
     public int getTotalDuration() {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -114,8 +102,6 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
 
         return total;
     }
-
-    // Total Calories
     public int getTotalCalories() {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -136,8 +122,6 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
 
         return total;
     }
-
-    // Get All Workouts
     public Cursor getAllWorkouts() {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -148,8 +132,6 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
                 null
         );
     }
-
-    // Delete Workout
     public void deleteWorkout(int id) {
 
         SQLiteDatabase db = this.getWritableDatabase();

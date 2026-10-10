@@ -1,11 +1,11 @@
-# 🏋️ VitaFit — AI Fitness Tracker
+﻿# ðŸ‹ï¸ VitaFit â€” AI Fitness Tracker
 
 <p align="center">
   <strong>AI-powered Android fitness tracking and wellness companion built with Java, Firebase, and Firebase AI Logic.</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Ashutosh9-pan/VitaFit-AI-Fitness-Tracker">
+  <a href="https://github.com/PhaseDev6/CodeAlpha_FitnessTrackerApp">
     <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository">
   </a>
   <img src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 17">
@@ -15,42 +15,42 @@
 
 > **VitaFit provides general fitness and wellness guidance. It is not a substitute for professional medical advice.**
 
-## ✨ Overview
+## âœ¨ Overview
 
 VitaFit is a modern Android fitness tracker designed to combine **workout logging, progress analytics, reminders, profile management, and AI-assisted wellness tools** in one mobile application.
 
 The app includes a dedicated **AI Fitness Assistant hub** with multiple tools for recommendations, coaching, meal planning, workout planning, and progress analysis.
 
-## 🚀 Key Features
+## ðŸš€ Key Features
 
-### 🏃 Fitness Tracking
+### ðŸƒ Fitness Tracking
 - Personalized dashboard with workout summaries
 - Add, search, review, and delete workout records
 - Fitness statistics and progress visualization
 - Workout history export as **PDF or CSV**
 - Share generated workout reports
 
-### 🤖 AI Fitness Assistant
-- **Smart Recommendation** — profile-aware general fitness suggestions
-- **AI Coach Chat** — conversational guidance using saved profile and activity
-- **Balanced Diet Planner** — meal suggestions based on user preferences
-- **AI Workout Planner** — structured workout suggestions based on selected preferences
-- **AI Progress Analyzer** — reviews saved workout activity and consistency
+### ðŸ¤– AI Fitness Assistant
+- **Smart Recommendation** â€” profile-aware general fitness suggestions
+- **AI Coach Chat** â€” conversational guidance using saved profile and activity
+- **Balanced Diet Planner** â€” meal suggestions based on user preferences
+- **AI Workout Planner** â€” structured workout suggestions based on selected preferences
+- **AI Progress Analyzer** â€” reviews saved workout activity and consistency
 
-### 🔐 Security & Account
+### ðŸ” Security & Account
 - Secure email/password authentication
 - Email verification
 - Firebase App Check with **Play Integrity**
 - Sensitive configuration files excluded from the repository
 
-### 🎨 User Experience
+### ðŸŽ¨ User Experience
 - Light and dark themes
 - Responsive bottom navigation
 - Navigation drawer
 - Workout reminders with reboot restoration
 - Mobile-friendly AI response formatting
 
-## 🛠️ Tech Stack
+## ðŸ› ï¸ Tech Stack
 
 | Area | Technology |
 |---|---|
@@ -65,7 +65,7 @@ The app includes a dedicated **AI Fitness Assistant hub** with multiple tools fo
 | Async Utilities | Guava ListenableFuture |
 | Build System | Gradle Kotlin DSL |
 
-## 📱 Screenshots
+## ðŸ“± Screenshots
 
 <p align="center">
   <img src="screenshots/16-splash-screen.jpg" width="220" alt="Screenshot of VitaFit splash screen." />
@@ -102,7 +102,7 @@ The app includes a dedicated **AI Fitness Assistant hub** with multiple tools fo
 
 </details>
 
-## ⚙️ Requirements
+## âš™ï¸ Requirements
 
 - Android Studio
 - JDK 17
@@ -110,12 +110,12 @@ The app includes a dedicated **AI Fitness Assistant hub** with multiple tools fo
 - A Firebase project
 - Internet connection for Firebase and AI features
 
-## 🔧 Getting Started
+## ðŸ”§ Getting Started
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Ashutosh9-pan/VitaFit-AI-Fitness-Tracker.git
+git clone https://github.com/PhaseDev6/CodeAlpha_FitnessTrackerApp.git
 cd VitaFit-AI-Fitness-Tracker
 ```
 
@@ -144,7 +144,7 @@ Enable the required Firebase services:
 
 Sync the Gradle files, connect an Android device or start an emulator, and run the application from Android Studio.
 
-## 🔒 Security Notes
+## ðŸ”’ Security Notes
 
 The repository intentionally excludes sensitive and machine-specific files, including:
 
@@ -156,22 +156,22 @@ The repository intentionally excludes sensitive and machine-specific files, incl
 
 **Never commit signing passwords, private keys, debug App Check tokens, API credentials, or other secrets.**
 
-## 📂 Project Structure
+## ðŸ“‚ Project Structure
 
 ```text
 VitaFit-AI-Fitness-Tracker/
-├── app/
-│   └── src/main/
-│       ├── java/        # Activities, adapters, Firebase logic, AI integration
-│       ├── res/         # Layouts, menus, drawables, themes, and strings
-│       └── AndroidManifest.xml
-├── screenshots/         # Application screenshots
-├── build.gradle.kts
-├── settings.gradle.kts
-└── README.md
+â”œâ”€â”€ app/
+â”‚   â””â”€â”€ src/main/
+â”‚       â”œâ”€â”€ java/        # Activities, adapters, Firebase logic, AI integration
+â”‚       â”œâ”€â”€ res/         # Layouts, menus, drawables, themes, and strings
+â”‚       â””â”€â”€ AndroidManifest.xml
+â”œâ”€â”€ screenshots/         # Application screenshots
+â”œâ”€â”€ build.gradle.kts
+â”œâ”€â”€ settings.gradle.kts
+â””â”€â”€ README.md
 ```
 
-## 🎯 What This Project Demonstrates
+## ðŸŽ¯ What This Project Demonstrates
 
 - Android application development with **Java**
 - Firebase Authentication and Realtime Database integration
@@ -182,15 +182,15 @@ VitaFit-AI-Fitness-Tracker/
 - Application security with **Firebase App Check + Play Integrity**
 - Responsive Android UI with Material Components
 
-## 👨‍💻 Author
+## ðŸ‘¨â€ðŸ’» Author
 
-**Ashutosh Panwar**
+**Dhruv Chamola**
 
-- GitHub: [@Ashutosh9-pan](https://github.com/Ashutosh9-pan)
-- Repository: [VitaFit-AI-Fitness-Tracker](https://github.com/Ashutosh9-pan/VitaFit-AI-Fitness-Tracker)
+- GitHub: [@PhaseDev6](https://github.com/PhaseDev6)
+- Repository: [CodeAlpha_FitnessTrackerApp](https://github.com/PhaseDev6/CodeAlpha_FitnessTrackerApp)
 
 ---
 
 <p align="center">
-  <strong>Built with Java • Android • Firebase • Firebase AI Logic 🚀</strong>
+  <strong>Built with Java â€¢ Android â€¢ Firebase â€¢ Firebase AI Logic ðŸš€</strong>
 </p>

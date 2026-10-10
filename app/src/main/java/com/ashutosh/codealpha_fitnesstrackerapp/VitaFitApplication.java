@@ -1,4 +1,4 @@
-package com.ashutosh.codealpha_fitnesstrackerapp;
+﻿package com.ashutosh.codealpha_fitnesstrackerapp;
 
 import android.app.Application;
 import android.util.Log;
@@ -17,8 +17,6 @@ public class VitaFitApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        // Initialize Firebase
         FirebaseApp.initializeApp(this);
 
         FirebaseAppCheck firebaseAppCheck =
@@ -27,7 +25,6 @@ public class VitaFitApplication extends Application {
         if (BuildConfig.DEBUG) {
             installDebugAppCheck(firebaseAppCheck);
         } else {
-            // Signed release build
             firebaseAppCheck.installAppCheckProviderFactory(
                     PlayIntegrityAppCheckProviderFactory.getInstance()
             );
@@ -38,11 +35,6 @@ public class VitaFitApplication extends Application {
 
     private void installDebugAppCheck(FirebaseAppCheck firebaseAppCheck) {
         try {
-            /*
-             * Debug provider is loaded using reflection.
-             * This prevents release-build compilation errors because
-             * firebase-appcheck-debug is only available in debug builds.
-             */
             Class<?> providerClass = Class.forName(
                     "com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory"
             );

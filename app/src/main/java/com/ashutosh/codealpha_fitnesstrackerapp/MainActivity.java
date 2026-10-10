@@ -1,4 +1,4 @@
-package com.ashutosh.codealpha_fitnesstrackerapp;
+﻿package com.ashutosh.codealpha_fitnesstrackerapp;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -315,8 +315,8 @@ public class MainActivity extends AppCompatActivity
             greeting = "Good Evening";
         }
 
-        txtTitle.setText("👋 " + greeting);
-        txtWelcome.setText("Ready to crush your fitness goals today? 💪");
+        txtTitle.setText("ðŸ‘‹ " + greeting);
+        txtWelcome.setText("Ready to crush your fitness goals today? ðŸ’ª");
 
         SimpleDateFormat dateFormat =
                 new SimpleDateFormat(
@@ -338,7 +338,7 @@ public class MainActivity extends AppCompatActivity
 
                     if (name != null && !name.trim().isEmpty()) {
                         txtTitle.setText(
-                                "👋 "
+                                "ðŸ‘‹ "
                                         + greeting
                                         + ", "
                                         + getFirstName(name)
@@ -378,8 +378,8 @@ public class MainActivity extends AppCompatActivity
 
             txtNavGoal.setText(
                     goal != null && !goal.trim().isEmpty()
-                            ? "🎯 Goal: " + goal
-                            : "🎯 Goal: Not Set"
+                            ? "ðŸŽ¯ Goal: " + goal
+                            : "ðŸŽ¯ Goal: Not Set"
             );
 
             if (bmi != null && bmi > 0) {
@@ -389,7 +389,7 @@ public class MainActivity extends AppCompatActivity
                                 : " (" + bmiCategory + ")";
 
                 txtNavBMI.setText(
-                        "⚖ BMI: "
+                        "âš– BMI: "
                                 + String.format(
                                 Locale.getDefault(),
                                 "%.1f",
@@ -398,21 +398,21 @@ public class MainActivity extends AppCompatActivity
                                 + category
                 );
             } else {
-                txtNavBMI.setText("⚖ BMI: Not Calculated");
+                txtNavBMI.setText("âš– BMI: Not Calculated");
             }
         });
     }
 
     private void setupQuoteOfTheDay() {
         String[] quotes = {
-                "“Consistency beats motivation.”",
-                "“Small progress is still progress.”",
-                "“One workout today is better than none.”",
-                "“Strong habits build a stronger you.”",
-                "“Every workout moves you forward.”",
-                "“Success starts with showing up.”",
-                "“Your future self will thank you.”",
-                "“Progress is built one session at a time.”"
+                "â€œConsistency beats motivation.â€",
+                "â€œSmall progress is still progress.â€",
+                "â€œOne workout today is better than none.â€",
+                "â€œStrong habits build a stronger you.â€",
+                "â€œEvery workout moves you forward.â€",
+                "â€œSuccess starts with showing up.â€",
+                "â€œYour future self will thank you.â€",
+                "â€œProgress is built one session at a time.â€"
         };
 
         txtQuote.setText(
@@ -737,12 +737,12 @@ public class MainActivity extends AppCompatActivity
 
         if (weeklyProgress >= 100) {
             txtWeeklyGoal.setText(
-                    "100% Weekly Goal Completed 🎉"
+                    "100% Weekly Goal Completed ðŸŽ‰"
             );
         } else {
             txtWeeklyGoal.setText(
                     weeklyProgress
-                            + "% Weekly Goal Completed • "
+                            + "% Weekly Goal Completed â€¢ "
                             + weeklyWorkouts
                             + "/"
                             + WEEKLY_WORKOUT_GOAL
@@ -846,7 +846,7 @@ public class MainActivity extends AppCompatActivity
     ) {
         if (totalWorkouts == 0) {
             txtInsight.setText(
-                    "Welcome to VitaFit! 🏋️\n\n"
+                    "Welcome to VitaFit! ðŸ‹ï¸\n\n"
                             + "Start your first workout today. "
                             + "Your personalised fitness insight will appear here."
             );
@@ -857,30 +857,30 @@ public class MainActivity extends AppCompatActivity
 
         if (progress >= 100) {
             suggestion =
-                    "🏆 Excellent work! You reached your calorie goal. "
+                    "ðŸ† Excellent work! You reached your calorie goal. "
                             + "Stay consistent and recover well.";
         } else if (totalWorkouts >= 5
                 || totalCalories >= 1000) {
             suggestion =
-                    "🔥 Great consistency! Keep balancing training, hydration and recovery.";
+                    "ðŸ”¥ Great consistency! Keep balancing training, hydration and recovery.";
         } else if (totalDuration < 90) {
             suggestion =
-                    "💡 Try adding 10–15 minutes to one workout this week for steady progress.";
+                    "ðŸ’¡ Try adding 10â€“15 minutes to one workout this week for steady progress.";
         } else {
             suggestion =
-                    "💪 You are building momentum. Keep showing up and progress gradually.";
+                    "ðŸ’ª You are building momentum. Keep showing up and progress gradually.";
         }
 
         String insight =
-                "🔥 Total Calories: "
+                "ðŸ”¥ Total Calories: "
                         + totalCalories
                         + " kcal"
-                        + "\n🏋 Total Workouts: "
+                        + "\nðŸ‹ Total Workouts: "
                         + totalWorkouts
-                        + "\n⏱ Total Duration: "
+                        + "\nâ± Total Duration: "
                         + totalDuration
                         + " min"
-                        + "\n🎯 Goal Progress: "
+                        + "\nðŸŽ¯ Goal Progress: "
                         + progress
                         + "%"
                         + "\n\n"
@@ -947,19 +947,18 @@ public class MainActivity extends AppCompatActivity
                         + "receive personalised fitness recommendations, and stay "
                         + "consistent with daily reminders.\n\n"
                         + "Key Features\n\n"
-                        + "✓ Firebase Authentication\n"
-                        + "✓ User-Specific Workout Tracking\n"
-                        + "✓ Workout History and Editing\n"
-                        + "✓ Statistics and Progress Charts\n"
-                        + "✓ AI Workout Recommendation\n"
-                        + "✓ Daily Workout Reminder\n"
-                        + "✓ BMI and Fitness Profile\n"
-                        + "✓ PDF and CSV Export\n"
-                        + "✓ Dark Mode\n\n"
-                        + "Developed by\n"
-                        + "Ashutosh Panwar\n\n"
+                        + "âœ“ Firebase Authentication\n"
+                        + "âœ“ User-Specific Workout Tracking\n"
+                        + "âœ“ Workout History and Editing\n"
+                        + "âœ“ Statistics and Progress Charts\n"
+                        + "âœ“ AI Workout Recommendation\n"
+                        + "âœ“ Daily Workout Reminder\n"
+                        + "âœ“ BMI and Fitness Profile\n"
+                        + "âœ“ PDF and CSV Export\n"
+                        + "âœ“ Dark Mode\n\n"
+                        + "Developed by\n" + "Dhruv Chamola\n\n"
                         + "Version 1.0\n"
-                        + "© 2026 VitaFit";
+                        + "Â© 2026 VitaFit";
 
         new MaterialAlertDialogBuilder(this)
                 .setIcon(R.mipmap.ic_launcher_round)

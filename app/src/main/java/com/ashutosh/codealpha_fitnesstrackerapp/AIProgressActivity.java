@@ -1,4 +1,4 @@
-package com.ashutosh.codealpha_fitnesstrackerapp;
+﻿package com.ashutosh.codealpha_fitnesstrackerapp;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -451,10 +451,6 @@ public class AIProgressActivity extends AppCompatActivity {
                             )
                     );
 
-            /*
-             * For older records without createdAt,
-             * the latest iterated workout is used as fallback.
-             */
             if (createdAt > latestCreatedAt
                     || latestCreatedAt
                     == Long.MIN_VALUE) {
@@ -485,18 +481,10 @@ public class AIProgressActivity extends AppCompatActivity {
     ) {
 
         int score = 0;
-
-        /*
-         * Recorded workout habit: maximum 60 points.
-         */
         score += Math.min(
                 60,
                 totalWorkouts * 6
         );
-
-        /*
-         * Recorded active time: maximum 40 points.
-         */
         score += Math.min(
                 40,
                 totalDuration / 25
@@ -513,22 +501,22 @@ public class AIProgressActivity extends AppCompatActivity {
     ) {
 
         if (score >= 85) {
-            return "Strong activity tracking ⭐⭐⭐⭐⭐";
+            return "Strong activity tracking â­â­â­â­â­";
         }
 
         if (score >= 70) {
-            return "Steady activity habit ⭐⭐⭐⭐";
+            return "Steady activity habit â­â­â­â­";
         }
 
         if (score >= 50) {
-            return "Building a regular habit ⭐⭐⭐";
+            return "Building a regular habit â­â­â­";
         }
 
         if (score >= 30) {
-            return "Getting started consistently ⭐⭐";
+            return "Getting started consistently â­â­";
         }
 
-        return "Start tracking your workouts ⭐";
+        return "Start tracking your workouts â­";
     }
 
     private void analyzeProgress() {
@@ -560,14 +548,14 @@ public class AIProgressActivity extends AppCompatActivity {
                         + "profile and workout data supplied in the context.\n\n"
 
                         + "The response must include:\n"
-                        + "• Overall progress summary\n"
-                        + "• Activity score interpretation\n"
-                        + "• Workout consistency analysis\n"
-                        + "• Main strengths\n"
-                        + "• Areas needing improvement\n"
-                        + "• Recovery recommendations\n"
-                        + "• Realistic goals for the next seven days\n"
-                        + "• A short motivational conclusion\n\n"
+                        + "â€¢ Overall progress summary\n"
+                        + "â€¢ Activity score interpretation\n"
+                        + "â€¢ Workout consistency analysis\n"
+                        + "â€¢ Main strengths\n"
+                        + "â€¢ Areas needing improvement\n"
+                        + "â€¢ Recovery recommendations\n"
+                        + "â€¢ Realistic goals for the next seven days\n"
+                        + "â€¢ A short motivational conclusion\n\n"
 
                         + "Do not invent information that is not present. "
                         + "Do not diagnose medical conditions. "
@@ -656,7 +644,7 @@ public class AIProgressActivity extends AppCompatActivity {
         btnAnalyzeProgress.setText(
                 loading
                         ? "Analyzing Progress..."
-                        : "✨ Analyze My Progress"
+                        : "âœ¨ Analyze My Progress"
         );
 
         progressAnalysis.setVisibility(
@@ -806,7 +794,7 @@ public class AIProgressActivity extends AppCompatActivity {
             );
 
             btnExportProgressPdf.setText(
-                    "📤 Export & Share AI Report"
+                    "ðŸ“¤ Export & Share AI Report"
             );
 
         }
@@ -964,10 +952,6 @@ public class AIProgressActivity extends AppCompatActivity {
         if (!vitaFitFolder.exists()
                 && !vitaFitFolder.mkdirs()) {
 
-            /*
-             * Safe fallback if the public Downloads folder
-             * cannot be created on an older device.
-             */
             File externalFilesDirectory =
                     getExternalFilesDir(
                             Environment.DIRECTORY_DOCUMENTS
@@ -1204,10 +1188,6 @@ public class AIProgressActivity extends AppCompatActivity {
         }
     }
 
-    /*
-     * Handles PDF text wrapping and automatic page creation.
-     * This prevents a long Gemini analysis from being cut off.
-     */
     private static class PdfReportWriter {
 
         private static final int PAGE_WIDTH = 595;
